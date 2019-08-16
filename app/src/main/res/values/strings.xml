@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Anode Jacking Frame Operation Checklist</string>
+    <string name="form">Anode Jacking Operation Form</string>
+
+    <string name="question_name">Name</string>
+    <string name="question_section">Section</string>
+    <string name="question_AB">AB</string>
+    <string name="question_CD">CD</string>
+    <string name="question_potNo">Pot No.</string>
+    <string name="question_startTime">Starting Time</string>
+    <string name="question_endTime">Ending Time</string>
+    <string name="question_remarks">Remarks</string>
+    <string name="send_to">Your message will be sent to Mr. Wil Allen</string>
+    <string name="fcm_token">FCM Token: %s</string>
+    <string name="default_notification_channel_id">100069218</string>
+    <string name="default_notification_channel_name">Hovah</string>
+
+</resources>
