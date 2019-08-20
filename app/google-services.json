@@ -42,6 +42,43 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717670031220:android:cd292bfe52774381",
+        "android_client_info": {
+          "package_name": "com.hovah_inc.fms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717670031220-l2err0ahd84vgh5crvmesvap3anv9b0v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hovah_inc.fms",
+            "certificate_hash": "3424e3f9a6b52c2d28baa67afaf415e3f5d32117"
+          }
+        },
+        {
+          "client_id": "717670031220-grme6nls12kdfd8hoig9p5hvu7rvtdog.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiihwzrYPy55VZilOwG0O02FKdvYHVMKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717670031220-grme6nls12kdfd8hoig9p5hvu7rvtdog.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

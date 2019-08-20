@@ -1,15 +1,17 @@
 package com.hovah_inc.beamraisingoperationchecklist.notify;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
-import android.os.StrictMode;
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import com.hovah_inc.beamraisingoperationchecklist.R;
 
-import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Response;
@@ -25,8 +27,8 @@ import java.util.Map;
 public class Emergency extends AppCompatActivity {
     EditText edtTitle;
     EditText edtMessage;
-    final  String FCM_API = "https://fcm.googleapis.com/fcm/send";
-    final private String serverKey = "key=" + "AAAApxh3n3Q:APA91bHTJMY-yJXGf9m5PCwpwb1EG9XwhQihCFPSNPkwLNBTbVZHUAnYc5iRYaWz9em1FFRitFm5rLQihCFPSNPkwLNBTbVZHUAnYc5iRYaWz9em1EG9XyJgwVosLWYX7URUBcFoif9h";
+    final private String FCM_API = "https://fcm.googleapis.com/fcm/send";
+    final private String serverKey = "key=" + "AAAApxh3n3Q:APA91bHxsf33VcoAzcA3qqTTILCfD_Pdl9RLaDEgKbEu-meQgiH312PSHJpt25NzCHnLqq5lYeUQBvdgd9k2gL6zg0rFw92-J2Ks7QFpA4gyR_3XSZc8BEaKrL_4hQNpDgIh2AgAIF4Ux";
     final private String contentType = "application/json";
     final String TAG = "NOTIFICATION TAG";
 
@@ -38,8 +40,7 @@ public class Emergency extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency);
-
-        edtTitle = findViewById(R.id.editTitle);
+        edtTitle = findViewById(R.id.edtTitle);
         edtMessage = findViewById(R.id.edtMessage);
 
         findViewById(R.id.btnSend).setOnClickListener(
@@ -85,12 +86,11 @@ public class Emergency extends AppCompatActivity {
                     }
                 }){
             @Override
-            public Map<String, String> getHeaders() {
+            public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
                 params.put("Authorization", serverKey);
                 params.put("Content-Type", contentType);
                 return params;
-
             }
         };
         MySingleton.getInstance(getApplicationContext()).addToRequestQueue(jsonObjectRequest);

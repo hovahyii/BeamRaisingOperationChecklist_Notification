@@ -1,10 +1,13 @@
 package com.hovah_inc.beamraisingoperationchecklist.notify;
 
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -16,10 +19,9 @@ import android.os.Build;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
-import com.hovah_inc.beamraisingoperationchecklist.R;
-
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import com.hovah_inc.beamraisingoperationchecklist.R;
 
 import java.util.Random;
 
@@ -52,7 +54,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, ADMIN_CHANNEL_ID)
                 .setSmallIcon(R.drawable.notify_icon)
                 .setLargeIcon(largeIcon)
-                .setContentTitle(remoteMessage.getData().get("title"))
+                .setContentTitle(remoteMessage.getData().get("C"))
                 .setContentText(remoteMessage.getData().get("message"))
                 .setAutoCancel(true)
                 .setSound(notificationSoundUri)
@@ -65,12 +67,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         notificationManager.notify(notificationID, notificationBuilder.build());
     }
 
-
-
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void setupChannels(NotificationManager notificationManager){
         CharSequence adminChannelName = "New notification";
-        String adminChannelDescription = "Device to device notification";
+        String adminChannelDescription = "Device to devie notification";
 
         NotificationChannel adminChannel;
         adminChannel = new NotificationChannel(ADMIN_CHANNEL_ID, adminChannelName, NotificationManager.IMPORTANCE_HIGH);

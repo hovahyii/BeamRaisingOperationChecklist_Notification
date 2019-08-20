@@ -12,7 +12,7 @@
     <string name="question_remarks">Remarks</string>
     <string name="send_to">Your message will be sent to Mr. Wil Allen</string>
     <string name="fcm_token">FCM Token: %s</string>
-    <string name="default_notification_channel_id">100069218</string>
-    <string name="default_notification_channel_name">Hovah</string>
-
+    <string name="log_token">Log Token</string>
+    <string name="msg_subscribed">Subscribed to weather topic</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
 </resources>

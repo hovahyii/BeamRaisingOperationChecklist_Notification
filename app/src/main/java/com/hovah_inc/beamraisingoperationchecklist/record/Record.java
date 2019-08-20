@@ -83,9 +83,9 @@ public class Record extends AppCompatActivity  {
 
 
             findViewById(R.id.questions_submit_button).setOnClickListener(
-                    new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
+                                new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
                             String nameInput = name.getText().toString();
                             String sectionInput = section.getText().toString();
                             String potNoInput = potNo.getText().toString();
