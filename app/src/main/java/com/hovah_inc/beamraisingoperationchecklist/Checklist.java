@@ -26,7 +26,6 @@ public class Checklist extends AppCompatActivity {
         String userAgent = "Mozilla/5.0 (X11; Linux x86_64)  AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.137 Safari/537.36";
         webview.getSettings().setUserAgentString(userAgent);
 
-        webview.getSettings().setJavaScriptEnabled(true);
         webview.getSettings().setLoadWithOverviewMode(true);
         webview.getSettings().setUseWideViewPort(true);
 

@@ -1,8 +1,6 @@
 package com.hovah_inc.beamraisingoperationchecklist.notify;
 
-import android.app.Service;
 import android.content.Intent;
-import android.os.IBinder;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -52,9 +50,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         Uri notificationSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, ADMIN_CHANNEL_ID)
-                .setSmallIcon(R.drawable.notify_icon)
+                .setSmallIcon(R.drawable.anode_24)
                 .setLargeIcon(largeIcon)
-                .setContentTitle(remoteMessage.getData().get("C"))
+                .setContentTitle(remoteMessage.getData().get("title"))
                 .setContentText(remoteMessage.getData().get("message"))
                 .setAutoCancel(true)
                 .setSound(notificationSoundUri)
@@ -70,7 +68,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void setupChannels(NotificationManager notificationManager){
         CharSequence adminChannelName = "New notification";
-        String adminChannelDescription = "Device to devie notification";
+        String adminChannelDescription = "Device to device notification";
 
         NotificationChannel adminChannel;
         adminChannel = new NotificationChannel(ADMIN_CHANNEL_ID, adminChannelName, NotificationManager.IMPORTANCE_HIGH);

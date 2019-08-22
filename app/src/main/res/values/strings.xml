@@ -15,4 +15,10 @@
     <string name="log_token">Log Token</string>
     <string name="msg_subscribed">Subscribed to weather topic</string>
     <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <string name="donot">I do not want to sign up</string>
+    <string name="congrats">You have successfully registered into the database. This registration allows you to receive notification from your team members through the app</string>
+
+    <string name="about">What is this about?</string>
+
+    <string name="about2">By register through this app, your phone is now connected to our server. This allow us to use your token/phone ID to send the notification or message to your phone.</string>
 </resources>
