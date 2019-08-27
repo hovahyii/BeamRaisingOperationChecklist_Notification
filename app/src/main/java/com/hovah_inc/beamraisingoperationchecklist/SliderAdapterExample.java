@@ -31,7 +31,7 @@ public class SliderAdapterExample extends SliderViewAdapter<SliderAdapterExample
         switch (position) {
             case 0:
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.safetycampaign)
+                        .load(R.drawable.thumbprint)
                         .into(viewHolder.imageViewBackground);
                 break;
             case 1:
@@ -41,15 +41,25 @@ public class SliderAdapterExample extends SliderViewAdapter<SliderAdapterExample
                 break;
             case 2:
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.fivesday)
+                        .load(R.drawable.safetycampaign)
                         .into(viewHolder.imageViewBackground);
                 break;
             case 3:
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.limas)
+                        .load(R.drawable.fivesday)
                         .into(viewHolder.imageViewBackground);
                 break;
             case 4:
+                Glide.with(viewHolder.itemView)
+                        .load(R.drawable.fives)
+                        .into(viewHolder.imageViewBackground);
+                break;
+            case 5:
+                Glide.with(viewHolder.itemView)
+                        .load(R.drawable.fivestwo)
+                        .into(viewHolder.imageViewBackground);
+                break;
+            case 6:
                 Glide.with(viewHolder.itemView)
                         .load(R.drawable.leadership)
                         .into(viewHolder.imageViewBackground);
@@ -67,7 +77,7 @@ public class SliderAdapterExample extends SliderViewAdapter<SliderAdapterExample
     @Override
     public int getCount() {
         //slider view count could be dynamic size
-        return 6;
+        return 8;
     }
 
     class SliderAdapterVH extends SliderViewAdapter.ViewHolder {

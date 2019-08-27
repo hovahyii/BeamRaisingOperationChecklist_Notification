@@ -37,7 +37,7 @@ public class PushNotification extends AppCompatActivity {
     EditText edtTitle;
     EditText edtMessage;
     final private String FCM_API = "https://fcm.googleapis.com/fcm/send";
-    final private String API_KEY = "key=" + "AIzaSyCQqIvYVbYFfvWYfh15ffeJ4eKborhs8UM\n";
+    final private String API_KEY = "key=" + "AIzaSyCQqIvYVbYFfvWYfh15ffeJ4eKborhs8UM";
     final private String contentType = "application/json";
     final String TAG = "Emergency";
 
@@ -62,7 +62,7 @@ public class PushNotification extends AppCompatActivity {
                         FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener( PushNotification.this,  new OnSuccessListener<InstanceIdResult>() {
                             @Override
                             public void onSuccess(InstanceIdResult instanceIdResult) {
-                                final String newToken = "d_1j88vn374:APA91bEvzQuzqVFyXKRx__1-o4bXFnUB-f3qE06UkPtNBs5WtORGCZn6DSoe9HGU7QFYTV0R9wLJVmo6C0fzX93husvP_Ag8OYpf0Fko-Sgg475ZIWYfEQbB6DhMYMyLfgD2LokEFHJU";//instanceIdResult.getToken();
+                                final String newToken = "eYeGUufvzik:APA91bGIlN5DOsVeQoABcw6b0Q8X2LQ1l4OdUMrr7865XX4LkBWpz_Rrpn5DjeRuCy5wZfzelXggXyJsIIjkYlo5uZ2QGl_qMBvt3XF7LMdddIkEEwvwHqODynR-TnP_SAgbuLtIk3yd";//instanceIdResult.getToken();
                                 Log.e("newToken",newToken);
                                 TOKEN = newToken; //TOKEN has to match what the receiver subscribed to
                                 NOTIFICATION_TITLE = edtTitle.getText().toString();

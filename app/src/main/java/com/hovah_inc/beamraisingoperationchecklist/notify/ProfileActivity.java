@@ -67,9 +67,9 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    ProfileActivity.this.finish();
-                    Intent intent = new Intent(getApplicationContext(), PushNotification.class);
+                    Intent intent = new Intent(ProfileActivity.this, PushNotification.class);
                     startActivity(intent);
+                    finish();
 
 
                 }
