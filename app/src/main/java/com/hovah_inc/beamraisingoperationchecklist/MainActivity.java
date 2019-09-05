@@ -5,10 +5,10 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.view.View;
 
 
+import com.hovah_inc.beamraisingoperationchecklist.document.Document;
 import com.hovah_inc.beamraisingoperationchecklist.notify.Emergency;
 import com.hovah_inc.beamraisingoperationchecklist.record.Record;
 import com.smarteist.autoimageslider.IndicatorAnimations;
